@@ -1,49 +1,20 @@
 $columns:12;
 $columnWidth:100% / $columns;
 
-$mdWidth:786px; 
-$smWidth:415px;
+$smMaxWidth:480px;
+$mdMaxWidth:1024px; 
 
-$buttonColour: #614242;
-$buttonHover: #ff722d;
+$mainColour: #614242;
+$subColour: #ff722d;
 
 $backgroundColour:#E8dfcf;
+
 
 *{
 	box-sizing: border-box;
 	padding: 0;
-	margin: 0 auto;
+	margin: 0;
 	font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.col{
-	float: left;
-	min-height: 100px;
-	text-align: center;
-}
-.row{
-	&::after{
-		display: block;
-		clear: both;
-		content: '';
-	}
-}
-
-
-.row_thin{
-	height: 70px;
-	margin: auto;
-	&::after{
-		display: block;
-		clear:both;
-		content:'';
-	}
-}
-.pageContainer{
-	max-width: $mdWidth;
-	padding: 0;
-	margin: 0 auto;
-	background-color: $backgroundColour;
 }
 
 @for $i from 1 through $columns{
@@ -54,30 +25,116 @@ $backgroundColour:#E8dfcf;
 		margin-left: $columnWidth * $i;
 	}
 } 
+.col{
+	float: left;
+	min-height: 100px;
+	text-align: center;
+}
+.col_bar{
+	float: left;
+	min-height: 60px;
+	text-align: center;
+	background-color: $mainColour;
+}
+.row{
+	&::after{
+		display: block;
+		clear: both;
+		content: '';
+	}
+}
 
+.invisibleD, h4, .mobileLogo, .searchbar{
+	display: none;
+}
 
+.banner{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../img/topImgCopy.png');
+	&::after{
+	}
+}
 
-.hdr__img{
-	opacity: 0.4;
+.logo{
+	margin: 0 auto;
+	margin-top: 50px;
+	flex:1;
+	img{
+		width: 100%;
+	}
+}
+
+.content{
+	flex:2;
+	margin-top: 100px;
+	color: white;
+	h1{
+		font-family: 'Kaushan Script', cursive;
+		font-size: 50px;
+		text-shadow: 5px 5px 3px grey;
+	}
+}
+
+.content_buttons {
+	flex:3;
+	margin-top: 200px;
+}
+
+.land__btn{
+	margin: 0 8px;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: $mainColour;
+	color: $subColour;
+	text-decoration: none;
+	padding: 5px 25px;
+	&:hover{
+		background-color: $subColour;
+		color: $mainColour;
+		border: 1px solid $mainColour;
+    }
+}
+
+.pageContainer{
+	max-width: 100%;
+	max-height: 100%;
+	padding: 0;
+	margin: 0 auto;
 	position: relative;
+	background-color: $backgroundColour;
 }
-.menuBar{
-	position: absolute;
-	top:230px;
+.page__logo{
+	height: 100%;
+	border-right: 1px solid $mainColour;
+	img{
+		width: 100%;
+		margin: 10px 0;
+	}
 }
-// .menuBar{
-// 	float: flex;
-// }
-.menuBar__logoImg{
-	width:100%;
-	margin-top: 5px;
-	margin-left: 5px;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-
+.sticky + .welcome {
+  padding-top: 300px;
+  width: 100%;
+}
+#menuIcon{
+	display: none;
+}
 .nav ul{
 	float: right;
 	margin-top: 15px;
-	list-style: none;
+	list-style-type: none;
+	text-decoration: none;
 	&:after{
 		display: block;
 		clear: both;
@@ -85,86 +142,313 @@ $backgroundColour:#E8dfcf;
 	}
 }
 
-.nav ul li{
+.nav ul li {
 	margin: 10px;
 	float: left;
 	width: 10%;
 	text-align: center;
-
+	font-size: 20px;
+	text-decoration-style: none;
 }
 
 .nav ul li a{
-	color: white;
+	color: $subColour;
+	text-decoration-line: none;
+	&:hover{
+		background-color: $subColour;
+		color: $mainColour;
+		border: 2px solid $subColour;
+	}
 }
-.infoText{
-	width: 500px;
-	margin: 10px auto;
-	text-align: center;
+.border{
+	border-right: 1px solid $mainColour;
+	height: 100vh;
 }
-.p{
-	font-size: 20px;
-}
-.mainImg{
-	float: relative;
+.welcome{
+	width: 70%;
+	padding: 10px;
+	float: left;
+	text-align: left;
+	color: $mainColour;
+	h2{
+		font-size: 100px;
+		margin: 20px;
+	}
+	p{
+		font-size: 20px;
+		margin-left: 50px;
+	}
+}	
+.tandoori{
+	width: 100%;
+	img{
+		width: 400px;
+		float: right;
+		z-index: 2;
+	}
 }
 
-.infoText__button{
-	float: center;
-	display: block;
+.sideMenu ul{
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	margin-top: 200px;
+	margin-left: 50px;
+	float: left;
+	text-decoration: none;
+}
+.sideMenu ul li a{
+	color: $mainColour;
 	font-size: 20px;
+	text-decoration-line: none;
+	&:hover{
+		color: $subColour;
+	}
+}
+.page__info{
+	height: 100vh;
+}
+.menuGallery{
+	width: 70%;
+	height: 100%;
+	float: left;
+	text-align: left;
+	color: $mainColour;
+	
+	h3{
+		font-size: 50px;
+		text-align: center;
+		margin: 30px;
+	}
+
+	.menu1{
+		float: left;
+		margin:0 auto;
+		img{
+			margin: 10px;
+		}
+	}
+}
+
+.order_btn1{
+	position: relative;
+	margin: 0 8px;
+	cursor: pointer;
+	font-size: 30px;
 	font-weight: bold;
-	width: 100px; height: 35px;
-	background-color: $buttonColour;
-	color: $buttonHover;
+	width: 150px;
+	height: 50px;
+	background-color: $mainColour;
+	color: $subColour;
 	border:none;
 	&:hover{
-		background-color: $buttonHover;
-		color: black;
-		border: 2px solid $buttonColour;
-    }
+		background-color: $subColour;
+		color: $mainColour;
+		border: 2px solid $mainColour;
+	}	
 }
-.menuSlide{
-	display: flex;
-	margin-top:15px;
-}
-.activeImg{
-	display: flex;
-	margin:0;
+.footer{
+	bottom: 0;
+	width: 100%;
+	float: left;
 }
 
 .ftr{
-	font-size: 20px;
+	font-size: 25px;
 	color: white;
+	padding: 20px;
+	bottom: 0;
+}
+
+.invisibleD{
+	display: none;
+}
+
+//Tablet version//
+
+@media screen and (max-width: $mdMaxWidth){	
+	//Code for all the changes between desktop and tablet
+	 @for $i from 1 through $columns{
+        .colM#{$i}{
+            width:$columnWidth * $i;
+        }
+        .offsetM#{$i}{
+            margin-left:$columnWidth * $i;
+        }
+     }
+
+    .invisibleT, .mobileLogo{
+    	display: none;
+    }
+    .banner{
+        display: flex;
+        height: 20vh;
+    }
+	.logo, .content , .content_buttons, #about, h3, .menu, #menuIcon, .searchbar{
+		display: none;
+	}
+	.page__logo{
+		width:20%;
+		border: none;
+	}	
+	.header{
+		z-index: 10;
+	}
+	.bigMenu{
+		display: inline-block;
+		margin: 0 auto;
+		position: relative;
+		top:20px;
+		z-index: 1;
+	}
+	h4{
+		display: inline !important;
+		position: relative;
+		top:40px;
+		text-align: center;
+		color: $subColour;
+	}
+	.sideMenu{
+		display: inline !important;
+		display: flex; 
+		justify-content: space-around;
+	}
+	.sideMenu ul{
+		margin-top: 100px;
+		margin-left: 0 !important;
+		height: 50px;
+		display: flex;
+		justify-content: space-around;
+	}
+	.sideMenu ul li{
+		float: left;
+	}
+	.menuGallery{
+		width: 95%;
+		img{
+			width: 100%;
+		}
+	}
+	.colM12{
+		width: 100% !important;
+	}
+		.orderBtn{
+		position: absolute;
+		bottom: 52%;
+		left: 0;
+		right: 0;	
+	}
+	.footer{
+		width: 100vw;
+	}
+
+     .ftr{
+        font-size: 25px;
+        color: white;
+        float: left;
+     }
 }
 
 
 
+//Mobile version//
 
-
-
-
-
-//mobile version//
-
-
-@media (min-width: $smWidth) {
-    @for $i from 1 through $columns{
+@media screen and (max-width: $smMaxWidth){
+	//Code for all the changes between tablet and mobile
+	@for $i from 1 through $columns{
         .colS#{$i}{
             width:$columnWidth * $i;
         }
-
         .offsetS#{$i}{
             margin-left:$columnWidth * $i;
-        }
+         }
+     }
+    .brown{
+    	min-height: 50px !important;
+    	max-height: 50px !important;
+     }
 
-    }
+	.banner, #about, .sideMenu, .bigMenu, .page__logo{
+		display: none;
+	}
+	.pageInfo h4{
+		display: none !important;
+	}
+	.orderBtn{
+		position: fixed;
+		float: left;
+		left: 0;
+		right: 0;
+		bottom: 10px;
+	}
+	.order_btn1{
+		width: 100px !important;
+	}
+	button{
+		max-width: 150px;
+		padding: 4px 12px;
+	}
+	.sideMenu ul{
+		margin-top: 0 !important;
+		display: flex;
+		margin-left: 0 !important;
+		flex: flex-wrap;
+		justify-content: space-around;
+	}
+	#menuIcon{
+		display: block;
+		float: left;
+		margin:12px;
+		font-size: 30px;
+		color:$subColour;
+		&:hover{
+			opacity: 0.5;
+		}
+	}
+	.menuGallery{
+		margin: 0 auto !important;
+	}
+	.mobileLogo{
+		display: block !important;
+		font-size: 25px;
+		margin-top: 5px;
+		text-align: center;
+		color: $subColour;
+		font-family: 'Kaushan Script', cursive;
+	}
+	#list{
+		display: none;
+		flex-direction: column;
+		align-content: center;
+		float: none;
+		clear: both;
+	}
+	#list ul li{
+		float: none;
+		padding-top: 20px;
+	}
+	.fa-search{
+		display: none;
+	}
+	.searchbar{
+		float: right;
+		color: $subColour;
+		display: block;
+		margin:12px;
+		font-size: 30px;
+	}
+
+	.footer{
+		position: fixed;
+		bottom: 0px;
+		.col{
+			max-height: 30px;
+		}
+		.ftr{
+			font-size:15px;
+		}
+	}	
 }
-
-
-
-
-
-
 
 
 
@@ -177,18 +461,6 @@ $backgroundColour:#E8dfcf;
     background-color: #2980b9;
 }
 
-.green{
-    background-color: #16a085;
-}
-
-.yellow{
-    background-color: #f1c40f;
-}
-
-.purple{
-    background-color: #9b59b6;
-}
-
 .grey{
     background-color: #808080;
 }
@@ -199,17 +471,6 @@ $backgroundColour:#E8dfcf;
 
 .brown{
 	background-color: #614242;
-}
-.pink{
-    background-color: #ff9ff3;
-}
-
-.skyblue{
-    background-color: #48dbfb;
-}
-
-.lime{
-    background-color: #badc58;
 }
 
 .black{

@@ -1,74 +1,160 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Formative 1.2</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300 " rel="stylesheet">
-  </head>
-  <body>
-  	<div class="pageContainer">
-  		<div class="row hdr">
-  			<div class="col col12">
-  			<img src="img/topImg.jpg" class="hdr__img" width="786px" height="300px" /></div>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tandoori Nights</title>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans+Condensed:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">   
+</head>
 
-  		<div class="row_thin menuBar brown">
-  			<div class="col col12">
-  			<div class="col col3 logo"><img src="img/logo.png" class="menuBar__logoImg" ></div>
-  			<div class="col offset2"></div>
-  			<div class="col col7 colS7 nav menuToggle">
-  				<ul class="menu">
-  					<li><a href="#">HOME</a></li>
-  					<li><a href="#">ABOUT</a></li>
-  					<li><a href="#">MENU</a></li>
-  					<li><a href="#">ORDER</a></li>
-  					<li><a href="#">CONTACT</a></li>
-  					<li><a href="#"><img src="img/search-white.png" width="20px" height="20px"></a></li>	
-  				</ul>
-  			</div></div></div></div>
+<body>
+  <div class="banner">
+    <div class="logo ">
+      <a href="index.html">
+      <img src="img/logo.png">
+    </a></div>
+    <div class="content col col12">
+      <h1>TASTE OF INDIA</h1>
+      <h1>FOR YOUR DINNER</h1>
+    </div>
+    <div class="content_buttons col col12">
+      <a href="#about" class="land__btn btn1" type="button">ABOUT</a>
+      <a href="#menu" class="land__btn btn2" type="button">ORDER</a>
+    </div>
+  </div>
 
-  		<div class="row">
-  			<div class="col col12">
-  			<div class="mainImg">
-  				<img src="img/onionbhaji.png"/>
-  			
 
-  			<div class="infoText">
-  				<p>Vegetables mixed with finely chopped onions and spices dipped in gram flour and deep fried.</p>
-  			</div>
-        <div class="col offset4"></div>
-  			<div class="col col2 btn"><button class="infoText__button" type="button">ADD</button></div>
-  			<div class="col col2 btn"><button class="infoText__button"  type="button">FINISH</button></div>
-        <div class="col offset4"></div>
-  		</div></div></div>
+<!-- Landing page end -->
+    <div class="pageContainer">
+    <div class="row header" id="myHeader">
+      <div class="col_bar colS12 col12 colM12 flex" id="nav">
+        <div class="col_bar colS2 col2 colM2 page__logo" id="logo"><a href="index.html"><img src="img/logo.png"></a></div>
+        <div class="col_bar colS3 colM3">
+          <div id="menuIcon" onclick="showNav()"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="col_bar colM6 colS6 col10 nav">
+          <div class="mobileLogo">Tandoori Nights
+          </div>
 
-  		<div class="row">
-  			<div class="col col1 leftArrow"><img src="img/left-arrow.png"></div>
-  			<div class="col offset4"></div>
-  			<div class="col col2 menuType"><h2>Entrée</h2></div>
-  			<div class="col offset4"></div>
-  			<div class="col col1 rightArrow"><img src="img/right-arrow.png"></div>
-  		</div>
+         <ul class="nav_list" id="list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#menu" class="active">MENU</a></li>
+          <li><a href="#">ORDER</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+        </div>
+        <div class="searchbar"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+    <!-- header -->
 
-  		<div class="row">
-  			<div class="col col12 menuSlide">
-  			<div class="menuImg"><img src="https://via.placeholder.com/150"></div>
-  			<div class="menuImg"><img src="https://via.placeholder.com/150"></div>
-  			<div class="menuImg activeImg"><img src="https://via.placeholder.com/180"></div>
-        <div class="menuImg"><img src="https://via.placeholder.com/150"></div>
-        <div class="menuImg"><img src="https://via.placeholder.com/150"></div>
-  		</div></div>
+      <div class="row" id="about">
+        <div class="col col12">
+        <div class="col offset2 border"></div>
+        <div class="col col10 welcome" >
+         <h2>WELCOME</h2>
+         <br>
+         <p>Tandoori Nights has provided quality authentic Indian cuisine in the Western suburbs since 2009. We use only the finest and freshest ingredients to create traditional Indian favourites, and tailor each mouth watering meal to suit all taste buds. Our friendly and knowledgeable staff provide excellent service and you will notice our prices are also very reasonable! Our takeaway menu is available for pick up and delivery within our local suburbs, so please enquire with one of our team members when you place an order. 
+         <br><br>
+         Come and visit or give us a call,<br>
+         04 479 4000 or 027 417 5491.</p>
+         <div class="col col10 tandoori"><img src="img/tandoori2.png"></div>
+        </div>
+        </div>
+      </div>
+<!-- about page end -->
+    
+  <div class="row" id="menu">
+    <div class="col col12">
+      <div class="col col2 menu border">
+      <div class="sideMenu">
+          <ul>
+            <li><a href="#">Entree</a></li>
+            <li ><a href="#">Chicken</a></li>
+            <li ><a href="#">Lamb</a></li>
+            <li><a href="#">Beef</a></li>
+            <li ><a href="#">Seafood</a></li>
+            <li class="#"><a href="#">Vegetables</a></li>
+            <li class="#"><a href="#">Side</a></li>
+          </ul>
+        </div>
+    </div>
+      <div class="col col10 colM12 pageInfo">
+        <div class="bigMenu invisibleD">
+          <img src="img/onionbhaji.png"/>
+        </div>
+        <br>
+        <h4>Vegetables mixed with finely chopped onions and spices dipped in gram flour and deep fried.</h4>
 
-  		<div class="row_thin brown">
-        <div class="col col12 footer_fixed">
-        <div class="col offset1"></div>
-  			<div class="col col2 ftr"> Order (Itmes)</div>
-  			<div class="col offset6 "></div>
-  			<div class="col col2 ftr">$0.00</div>
-  		</div></div></div>
+        <div class="sideMenu invisibleD">
+          <ul>
+            <li><a href="#">Entree</a></li>
+            <li><a href="#">Chicken</a></li>
+            <li><a href="#">Lamb</a></li>
+            <li><a href="#">Beef</a></li>
+            <li><a href="#">Seafood</a></li>
+            <li><a href="#">Vegetables</a></li>
+            <li><a href="#">Side</a></li>
+          </ul>
+        </div>
+         <div class="menuGallery">
+          <div class="row">
+            <h3>Entree</h3>
+          </div>
+          <br>
 
-  	</div>
+          <div class="col col12 colM12 colS12 gallery">
+            <div class="row">
+            <div class="col col3 colM3 colS6 menu1"><img src="https://via.placeholder.com/200"/> </div>
+            <div class="col col3 colM3 colS6 menu1"><img src="https://via.placeholder.com/200"/> </div>
+            <div class="col col3 colM3 colS6 menu1"><img src=" https://via.placeholder.com/200"/> </div>
+            <div class="col col3 colM3 colS6 menu1"><img src=" https://via.placeholder.com/200"/> </div>
+            </div>
+          <div class="row">
+            <div class="col col3 colM3 colS6 menu1"><img src="https://via.placeholder.com/200 "/> </div>
+            <div class="col col3 colM3 colS6 menu1"><img src="https://via.placeholder.com/200 "/> </div>
+            <div class="col col3 colM3 colS6 menu1"><img src="https://via.placeholder.com/200 "/> </div>
+            <div class="col col3 colM3 colS6 menu1"><img src="https://via.placeholder.com/200 "/> </div>
+           </div>
+         </div>
+          <div class="row">
+            <div class="col colS12 col12 orderBtn">
+              <div class="col offsetS3 offset3"></div>
+              <div class="order_btn col colS3 col3">
+                <button class="order_btn1">ADD</button>
+              </div>
+              <div class="order_btn col colS3 col3">
+                <button class="order_btn1">FINISH</button>
+              </div>
+              <div class="col offsetS3 offset3"></div>
+            </div>
+          </div>
+         </div>
+       
+       <!-- //footer//   -->
+      <div class="row">
+        <div class="col colS12 colM12 col12 brown footer">
+            <div class="col colS3 colM3 col3 ftr">Order</div>
+           <div class="col offsetS3 offsetM3 offset3"></div>
+            <div class="col colS2 colM2 col2 ftr">$0.00</div>
+            <div class="col offsetS4 offsetM4 offset4"></div>
+          </div>
+        </div>
 
-  </body>
+     </div>     <!-- page__info div close -->
+
+
+    </div>
+  </div>
+
+
+</div> <!-- pageContainer div close -->
+<script src="js/script.js"></script>
+</body>
 </html>
+
+ 

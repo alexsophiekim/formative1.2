@@ -21,8 +21,8 @@
       <h1>FOR YOUR DINNER</h1>
     </div>
     <div class="content_buttons col col12">
-      <a href="#about" class="land__btn btn1" type="button">ABOUT</a>
-      <a href="#menu" class="land__btn btn2" type="button">ORDER</a>
+      <a href="#about" class="land__btn" type="button">ABOUT</a>
+      <a href="#menu" class="land__btn" type="button">ORDER</a>
     </div>
   </div>
 
@@ -30,7 +30,7 @@
 <!-- Landing page end -->
     <div class="pageContainer">
     <div class="row header" id="myHeader">
-      <div class="col_bar colS12 col12 colM12 flex" id="nav">
+      <div class="col_bar colS12 col12 colM12" id="nav">
         <div class="col_bar colS2 col2 colM2 page__logo" id="logo"><a href="index.html"><img src="img/logo.png"></a></div>
         <div class="col_bar colS3 colM3">
           <div id="menuIcon" onclick="showNav()"><i class="fas fa-bars"></i></div>
@@ -89,7 +89,15 @@
         </div>
         <br>
         <h4>Vegetables mixed with finely chopped onions and spices dipped in gram flour and deep fried.</h4>
-
+       <div class="col colS12 col12 orderBtn tablet_order">
+        <div class="col offsetS2 offsetM2 offset2"></div>
+        <div class="order_btn col colS8 colM8 col8">
+           <a href="#" class="order_btn1" type="button">ADD</a>
+           <a href="#" class="order_btn1" type="button">ORDER</a>
+        </div>
+        <div class="col offsetS2 offsetM2 offset23"></div>
+       </div>
+       
         <div class="sideMenu invisibleD">
           <ul>
             <li><a href="#">Entree</a></li>
@@ -121,20 +129,20 @@
             <div class="col col3 colM3 colS6 menu1"><img src="https://via.placeholder.com/200 "/> </div>
            </div>
          </div>
-          <div class="row">
+          <div class="row tablet_invisible">
             <div class="col colS12 col12 orderBtn">
-              <div class="col offsetS3 offset3"></div>
-              <div class="order_btn col colS3 col3">
-                <button class="order_btn1">ADD</button>
-              </div>
-              <div class="order_btn col colS3 col3">
-                <button class="order_btn1">FINISH</button>
-              </div>
-              <div class="col offsetS3 offset3"></div>
+               <div class="col offsetS2 offsetM2 offset2"></div>
+              <div class="order_btn col colS8 colM8 col8">
+           <a href="#" class="order_btn1" type="button">ADD</a>
+           <a href="#" class="order_btn1" type="button">ORDER</a>
+              <div class="col offsetS2 offsetM2 offset23"></div>
             </div>
           </div>
          </div>
        
+
+
+     </div>     <!-- page__info div close -->
        <!-- //footer//   -->
       <div class="row">
         <div class="col colS12 colM12 col12 brown footer">
@@ -144,9 +152,6 @@
             <div class="col offsetS4 offsetM4 offset4"></div>
           </div>
         </div>
-
-     </div>     <!-- page__info div close -->
-
 
     </div>
   </div>
